@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./assets/sunset.jpg') no-repeat center center fixed; 
+  background-size: cover; 
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  background: rgba(235, 179, 179, 0.9); /* Slight transparency to see background image */
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), /* Larger shadow */
+              0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.app-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), /* More pronounced shadow on hover */
+              0 16px 32px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.login-container,
+.dashboard-container {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.login-container:hover,
+.dashboard-container:hover {
+  background-color: rgba(221, 169, 126, 0.95); /* Slightly lighter background on hover */
+}
+
+.login-container form,
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #507eb1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background: #1a4777;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+.weather-today,
+.weather-forecast {
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.view-more-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #1d5380;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.view-more-button:hover {
+  background: #3b81aa;
+}
+
+.weather-forecast,
+.weekly-forecast {
+  margin-bottom: 20px;
+}
+
+.forecast-day {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  input {
+    width: calc(100% - 30px);
+  }
+
+  button {
+    width: calc(100% - 30px);
+  }
+}
+
+.error {
+  color: rgb(209, 193, 193);
+  margin-top: 10px;
+}
+
+.weather {
+  background-color: #af9595; /* Adjusted background color */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), /* Darker shadow */
+              0 12px 24px rgba(0, 0, 0, 0.15); /* Darker shadow */
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.weather h3 {
+  font-size: 1.5rem; 
+  margin-bottom: 10px; 
+  color: #333; 
+}
+
+.weather p {
+  font-size: 1rem; 
+  color: #141414; 
+  margin: 5px 0; 
+}
+
+.weather:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* Darker shadow on hover */
+              0 16px 32px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.weather ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather li {
+  background-color: #ffffff; /* Adjusted background color */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #000000; /* Slightly darker border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.weather li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e7e9eb;
+  border-radius: 8px;
+  border: 1px solid #000000; /* Slightly darker border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow */
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.container {
+  max-width: 700px;
+  height: 700px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.app .description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
